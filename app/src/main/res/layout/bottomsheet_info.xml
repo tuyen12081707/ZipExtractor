@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:tag="layout/bottomsheet_info_0"
+        android:background="@drawable/dialog_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_4sdp"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardBackgroundColor="@color/separator"
+            app:cardCornerRadius="@dimen/_2sdp"
+            app:cardElevation="0dp" />
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:id="@+id/fileName"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="File info"
+                android:layout_weight="1"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_5sdp" />
+
+            <ImageView
+                android:id="@+id/btnCancel"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/cancel"
+                android:layout_marginEnd="@dimen/_10sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:id="@+id/layoutExtract"
+            android:padding="@dimen/_8sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/text"
+                android:id="@+id/lblFilePath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="File path :"
+                style="@style/title" />
+
+            <TextView
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/text2"
+                android:id="@+id/txtFilePath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:text="path"
+                style="@style/label" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:id="@+id/layoutView"
+            android:padding="@dimen/_8sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/text"
+                android:id="@+id/lblFileSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="File size :"
+                style="@style/title" />
+
+            <TextView
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/text2"
+                android:id="@+id/txtFileSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:text="View"
+                style="@style/label" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/layoutShare"
+            android:padding="@dimen/_8sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/text"
+                android:id="@+id/lblTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Modified :"
+                style="@style/title" />
+
+            <TextView
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/text2"
+                android:id="@+id/txtTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:text="Share"
+                style="@style/label" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

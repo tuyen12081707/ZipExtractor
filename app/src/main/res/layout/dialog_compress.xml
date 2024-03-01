@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:tag="layout/dialog_compress_0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/_20sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Compress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:id="@+id/tv_archive_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Archive Name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <EditText
+                android:id="@+id/ed_file_name"
+                android:background="@drawable/rounded_edittext"
+                android:padding="10dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:inputType="text"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_archive_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_archive_name" />
+
+            <TextView
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:id="@+id/tv_archive_format"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Archive Format"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/tv_archive_name"
+                app:layout_constraintTop_toBottomOf="@+id/ed_file_name" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner_format"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/ed_file_name"
+                app:layout_constraintStart_toStartOf="@+id/tv_archive_format"
+                app:layout_constraintTop_toBottomOf="@+id/tv_archive_format" />
+
+            <TextView
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:id="@+id/tv_compression_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Compression Level"
+                app:layout_constraintEnd_toEndOf="@+id/tv_archive_format"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/tv_archive_format"
+                app:layout_constraintTop_toBottomOf="@+id/spinner_format" />
+
+            <Spinner
+                android:id="@+id/spinner_level"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/spinner_format"
+                app:layout_constraintStart_toStartOf="@+id/spinner_format"
+                app:layout_constraintTop_toBottomOf="@+id/tv_compression_level" />
+
+            <TextView
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:id="@+id/tv_save_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Save Location"
+                app:layout_constraintEnd_toEndOf="@+id/tv_archive_format"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/tv_compression_level"
+                app:layout_constraintTop_toBottomOf="@+id/spinner_level" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll"
+                android:background="@drawable/rounded_edittext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="@+id/spinner_level"
+                app:layout_constraintStart_toStartOf="@+id/tv_save_location"
+                app:layout_constraintTop_toBottomOf="@+id/tv_save_location">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:ellipsize="end"
+                    android:id="@+id/ed_save_location"
+                    android:background="@null"
+                    android:padding="10dp"
+                    android:focusable="false"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:shadowColor="@color/black"
+                    android:editable="false"
+                    android:layout_weight="0.8"
+                    app:layout_constraintEnd_toEndOf="@+id/ed_file_name"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="@+id/ed_file_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_save_location" />
+
+                <View
+                    android:layout_gravity="center"
+                    android:id="@+id/right_button"
+                    android:background="@drawable/ic_folder"
+                    android:layout_width="0dp"
+                    android:layout_height="27dp"
+                    android:layout_weight="0.1"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_alignParentEnd="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/ed_save_location"
+                    app:layout_constraintEnd_toEndOf="@+id/ed_save_location"
+                    app:layout_constraintHorizontal_bias="0.95"
+                    app:layout_constraintStart_toStartOf="@+id/ed_save_location"
+                    app:layout_constraintTop_toTopOf="@+id/ed_save_location" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Set Password"
+                app:layout_constraintEnd_toEndOf="@+id/ll"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/ll"
+                app:layout_constraintTop_toBottomOf="@+id/ll" />
+
+            <Button
+                android:id="@+id/buttonnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="Cancel"
+                android:backgroundTint="@color/DarkGray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/buttonnCompress"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutSetPassword"
+                app:layout_constraintVertical_bias="0" />
+
+            <Button
+                android:id="@+id/buttonnCompress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Compress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/buttonnCancel"
+                app:layout_constraintTop_toTopOf="@+id/buttonnCancel" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutSetPassword"
+                android:visibility="visible"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/ll"
+                app:layout_constraintStart_toStartOf="@+id/checkBox"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Password"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

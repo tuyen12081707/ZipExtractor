@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.demo.zipextractor.utils.FullDrawerLayout
+            android:id="@+id/drawerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/banner1"
+            android:layout_gravity="end"
+            android:fitsSystemWindows="false"
+            android:scrollbars="none"
+            android:tag="layout/activity_home_0">
+
+            <include
+                android:id="@+id/includeMain"
+                layout="@layout/custom_main" />
+
+            <include
+                android:id="@+id/navdrawer"
+                layout="@layout/activity_drawer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:fitsSystemWindows="true" />
+        </com.demo.zipextractor.utils.FullDrawerLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/banner1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:gravity="center" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

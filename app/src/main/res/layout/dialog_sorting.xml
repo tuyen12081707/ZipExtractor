@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:tag="layout/dialog_sorting_0"
+        android:background="@drawable/dialog_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_4sdp"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardBackgroundColor="@color/separator"
+            app:cardCornerRadius="@dimen/_2sdp"
+            app:cardElevation="0dp" />
+
+        <TextView
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:id="@+id/tv_sort_title"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sort By"
+            android:fontFamily="@font/myriadpro_bold"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_5sdp" />
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:id="@+id/llNameAsc"
+            android:background="?attr/selectableItemBackground"
+            android:paddingLeft="@dimen/_8sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingRight="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/imgNameAsc"
+                android:padding="@dimen/_3sdp"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:src="@drawable/radio_on" />
+
+            <TextView
+                android:textSize="@dimen/_13sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="@string/name_ascending"
+                style="@style/label" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:id="@+id/llNameDesc"
+            android:background="?attr/selectableItemBackground"
+            android:paddingLeft="@dimen/_8sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingRight="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/imgNameDsc"
+                android:padding="@dimen/_3sdp"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:src="@drawable/radio_off" />
+
+            <TextView
+                android:textSize="@dimen/_13sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="Name Descending"
+                style="@style/label" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:id="@+id/llDateAsc"
+            android:background="?attr/selectableItemBackground"
+            android:paddingLeft="@dimen/_8sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingRight="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/imgDateAsc"
+                android:padding="@dimen/_3sdp"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:src="@drawable/radio_off" />
+
+            <TextView
+                android:textSize="@dimen/_13sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="Date Ascending"
+                style="@style/label" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:id="@+id/llDateDesc"
+            android:background="?attr/selectableItemBackground"
+            android:paddingLeft="@dimen/_8sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingRight="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/imgDateDsc"
+                android:padding="@dimen/_3sdp"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:src="@drawable/radio_off" />
+
+            <TextView
+                android:textSize="@dimen/_13sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="Date Descending"
+                style="@style/label" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:id="@+id/llSizeAsc"
+            android:background="?attr/selectableItemBackground"
+            android:paddingLeft="@dimen/_8sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingRight="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/imgSizeAsc"
+                android:padding="@dimen/_3sdp"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:src="@drawable/radio_off" />
+
+            <TextView
+                android:textSize="@dimen/_13sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="Size Ascending"
+                style="@style/label" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:id="@+id/llSizeDesc"
+            android:background="?attr/selectableItemBackground"
+            android:paddingLeft="@dimen/_8sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingRight="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/imgSizeDsc"
+                android:padding="@dimen/_3sdp"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:src="@drawable/radio_off" />
+
+            <TextView
+                android:textSize="@dimen/_13sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="Size Descending"
+                style="@style/label" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

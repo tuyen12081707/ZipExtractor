@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:tag="layout/dialog_passuncomress_0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/_5sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:id="@+id/tvLock"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingRight="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Locked File"
+                android:paddingHorizontal="@dimen/_15sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/tvLockinfo"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingRight="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="To View Locked File, Please Enter the\10file password"
+                android:lineSpacingExtra="@dimen/_3sdp"
+                android:paddingHorizontal="@dimen/_15sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvLock"
+                app:layout_constraintStart_toStartOf="@+id/tvLock"
+                app:layout_constraintTop_toBottomOf="@+id/tvLock"
+                app:layout_constraintVertical_bias="0.08" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/layoutViewPassword"
+                android:background="@drawable/spinner_bg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="@+id/tvLockinfo"
+                app:layout_constraintStart_toStartOf="@+id/tvLockinfo"
+                app:layout_constraintTop_toBottomOf="@+id/tvLockinfo"
+                app:passwordToggleEnabled="true">
+
+                <EditText
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:id="@+id/edShowPassword"
+                    android:background="@null"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:layout_weight="1"
+                    android:inputType="textPassword"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_12sdp"
+                    style="@style/title" />
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/showPass"
+                    android:padding="@dimen/_3sdp"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:src="@drawable/visible" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearLayoutCompat"
+                android:background="#f0f0f0"
+                android:padding="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutViewPassword">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:gravity="right"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_weight="1">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/buttonnShowCancel"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_36sdp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:backgroundTint="@color/cancel_btn_color"
+                        app:cardCornerRadius="@dimen/_18sdp"
+                        app:cardElevation="0dp"
+                        app:cornerRadius="@dimen/_15sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/btnSaveLocaion">
+
+                        <TextView
+                            android:textSize="@dimen/_13sdp"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cancel"
+                            android:textAllCaps="true"
+                            android:fontFamily="@font/myriadpro_regular" />
+                    </androidx.cardview.widget.CardView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:gravity="left"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_weight="1">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/buttonnShowCompress"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_36sdp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:backgroundTint="@color/fab_color"
+                        app:cardCornerRadius="@dimen/_18sdp"
+                        app:cardElevation="0dp"
+                        app:cornerRadius="@dimen/_15sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/btnSaveLocaion">
+
+                        <TextView
+                            android:textSize="@dimen/_13sdp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center"
+                            android:id="@+id/txtAction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="OK"
+                            android:textAllCaps="true"
+                            android:fontFamily="@font/myriadpro_regular" />
+                    </androidx.cardview.widget.CardView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

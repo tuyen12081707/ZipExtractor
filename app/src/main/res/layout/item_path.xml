@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llMain"
+        android:tag="layout/item_path_0"
+        android:background="@drawable/ripple_path"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_36sdp">
+
+        <TextView
+            android:textSize="@dimen/_13sdp"
+            android:textColor="@color/nav_path_text_color"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Internal Storage &gt; "
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            style="@style/subtitle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
