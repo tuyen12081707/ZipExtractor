@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <declare-styleable name="theme">
+        <attr name="background_color" format="color"/>
+        <attr name="text_color" format="color"/>
+        <attr name="second_text_color" format="color"/>
+        <attr name="header_color" format="color"/>
+        <attr name="background_language_item" format="color"/>
+        <attr name="stroke_setting_item" format="color"/>
+        <attr name="bottom_navigation_select" format="color"/>
+        <attr name="bottom_navigation_unselect" format="color"/>
+    </declare-styleable>
+</resources>

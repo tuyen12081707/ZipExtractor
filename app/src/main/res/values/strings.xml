@@ -1,25 +1,133 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Zip Extractor</string>
-    <string name="terms_of_service">Terms of service</string>
-    <string name="privacy_policy">Privacy policy</string>
-    <string name="permission_disclosure">User agreement</string>
-    <string name="acceptAndContinue">Accept And Continue</string>
-    <string name="personalized">Yes, continue to see relevant ads</string>
-    <string name="non_personalized">No, see ads that are less relevant</string>
-    <string name="exit">Exit</string>
-    <string name="use_permission">Files and Media Permission</string>
-    <string name="use_permission_msg">This app needs the activation of an manage external storage permission to can work. Please tap on Grant Permission then switch on and active the permission.</string>
-    <string name="rename">Rename</string>
-    <string name="name_ascending">Name Ascending</string>
+
+    <string name="admob_id" translatable="false">ca-app-pub-8475252859305547~1705650489</string>
+    <string name="facebook_app_id" translatable="false">542114260912994</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb542114260912994</string>
+
+    <string name="app_name">Extractor &amp; Compressor</string>
+
+    <string name="ironsource_key" translatable="false">85460dcd</string>
+    <string name="inter_splash" translatable="false">inter_splash</string>
+    <string name="inter_intro" translatable="false">inter_intro</string>
+    <string name="inter_skip" translatable="false">inter_skip</string>
+    <string name="inter_archiver" translatable="false">inter_archiver</string>
+    <string name="inter_images" translatable="false">inter_images</string>
+    <string name="inter_videos" translatable="false">inter_videos</string>
+    <string name="inter_audios" translatable="false">inter_audios</string>
+    <string name="inter_document" translatable="false">inter_document</string>
+    <string name="inter_download" translatable="false">inter_download</string>
+    <string name="inter_directory" translatable="false">inter_directory</string>
+    <string name="inter_process" translatable="false">inter_process</string>
+    <string name="inter_history" translatable="false">inter_history</string>
+    <string name="inter_language" translatable="false">inter_language</string>
+
+    <string name="settings">Settings</string>
+    <string name="home">Home</string>
+
+    <string name="progress_title">Processing…</string>
+    <string name="progress_message">Please wait…</string>
+    <string name="msg_ret_success">Success</string>
+    <string name="msg_ret_warning">Warning (Non fatal error(s))</string>
+    <string name="msg_ret_fault">Fatal error </string>
+    <string name="msg_ret_command">Command line error</string>
+    <string name="msg_ret_memmory">Not enough memory for operation</string>
+    <string name="msg_ret_user_stop">User stopped the process</string>
+    <string name="history">History</string>
+    <string name="you_can_navigate">You can navigate</string>
+    <string name="compress">Compress</string>
+    <string name="extract">Extract</string>
+    <string name="extract_file">Extract file</string>
+    <string name="search">Search</string>
+    <string name="request_all_files_access">This app cannot run without All files access permission on Android 11 and above. Please grant the permission.</string>
+    <string name="skip">Skip</string>
+    <string name="document">Documents</string>
+    <string name="sort">Sort by</string>
+    <string name="please_enable_permission">Please enable the permission before you can use this app</string>
+    <string name="no_files_found">No files found</string>
+    <string name="archiver">Archiver</string>
+    <string name="sort_by_time">Sort by time</string>
     <string name="internal_storage">Internal Storage</string>
-    <string name="apk_title">Apk File</string>
-    <string name="archive_title">Archive Files</string>
-    <string name="audio_title">Audio</string>
-    <string name="picture_title">Picture</string>
-    <string name="app_description1">We care about your privacy and data security.We keep this app free by showing ads.</string>
-    <string name="app_description2">Can we continue to use your data to tailor ads for you?</string>
-    <string name="app_description3">You can change your choice anytime for App in the app settings. Our partners will collect data and use a unique identifier on your device to show you ads.</string>
-    <string name="video_title">Video</string>
-    <string name="ratetile">Support us by giving rate and your precious review !!\nIt will take few seconds only.</string>
+    <string name="cut_successfully">Cut successfully</string>
+    <string name="paste">Paste</string>
+    <string name="extract_to">Extract to</string>
+    <string name="select">Select</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="loading_ads">Loading...</string>
+    <string name="name">Name</string>
+    <string name="format">Format</string>
+    <string name="folder">Folder</string>
+    <string name="password">Password</string>
+    <string name="can_t_connect">Can\'t connect</string>
+    <string name="you_need_an_internet_connection_to_nuse_this_app">You need an internet connection to \nuse this app</string>
+    <string name="connect">Connect</string>
+    <string name="delete_file">Delete file</string>
+    <string name="are_you_sure_you_want_to_delete_these_file_s">Are you sure you want to delete these file(s)</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="open_file">Open file</string>
+    <string name="rename">Rename</string>
+    <string name="share">Share</string>
+    <string name="save">Save</string>
+    <string name="items_selected_management">Items selected management</string>
+    <string name="categories">Categories</string>
+    <string name="download">Download</string>
+    <string name="documents">Documents</string>
+    <string name="audios">Audios</string>
+    <string name="videos">Videos</string>
+    <string name="images">Images</string>
+    <string name="feedback">Feedback</string>
+    <string name="rate_us">Rate us</string>
+    <string name="more">More</string>
+    <string name="date">Date</string>
+    <string name="size">Size</string>
+    <string name="items">item(s)</string>
+    <string name="used">Used</string>
+    <string name="free">Free</string>
+    <string name="language">Language</string>
+    <string name="english">English</string>
+    <string name="hindi">Hindi</string>
+    <string name="spanish">Spanish</string>
+    <string name="french">French</string>
+    <string name="arabic">Arabic</string>
+    <string name="bengali">Bengali</string>
+    <string name="russian">Russian</string>
+    <string name="portuguese">Portuguese</string>
+    <string name="indonesian">Indonesian</string>
+    <string name="german">German</string>
+    <string name="italian">Italian</string>
+    <string name="korean">Korean</string>
+    <string name="support_extracting">Support extracting</string>
+    <string name="content_1">Quickly decompress multiple format files</string>
+    <string name="title_intro_2">Compress files &amp;  lock files</string>
+    <string name="content_2">Set a password to protect your data after compressing files</string>
+    <string name="title_intro_3">Save storage space</string>
+    <string name="content_3">Saving up to 30% file size when compressing to zip</string>
+    <string name="compressed">Compressed</string>
+    <string name="extracted">Extracted</string>
+    <string name="it_s_empty_here">It’s empty here</string>
+    <string name="file_not_supported">File not supported!</string>
+    <string name="success">Success</string>
+    <string name="toast_error">This format only supports single file compress</string>
+    <string name="deleted">Deleted</string>
+    <string name="name_error_1">Name must not be blank</string>
+    <string name="name_error_2">Name is already existed</string>
+    <string name="succeeded">Succeeded</string>
+    <string name="failed">Failed</string>
+    <string name="file_error">You don\'t have any app to handle this file</string>
+    <string name="Go_to_settings">Go to settings</string>
+    <string name="an_error_occurred">An error occurred</string>
+    <string name="view_history">View history</string>
+    <string name="do_not_exit">Do not exit while processing</string>
+    <string name="start">Start</string>
+    <string name="allow_permission">Allow permission</string>
+    <string name="message_request_permission">You need to provide Record Audio &amp; Write External Storage permission to be able to use all the features of the app</string>
+    <string name="allow">Allow</string>
+    <string name="pick_the_theme_you_like">Pick the theme you like</string>
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
+    <string name="apply">Apply</string>
+    <string name="this_action_can_contain_ads">This action can contain ads</string>
+    <string name="next">NEXT</string>
+    <string name="startHoa">START</string>
+
 </resources>

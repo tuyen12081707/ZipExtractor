@@ -1,62 +1,123 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+}
 android {
-    namespace 'com.demo.zipextractor'
     compileSdkVersion 33
     defaultConfig {
-        applicationId "com.demo.zipextractor"
-        minSdkVersion 19
-        targetSdkVersion 33
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        multiDexEnabled true
-    }
-
-    buildTypes {
-        release {
-            debuggable false
-            minifyEnabled true
-            shrinkResources true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        applicationId "unzipfiles.filecompressor.archive.rar.zip"
+        minSdkVersion 23
+        targetSdkVersion 32
+        versionCode 121
+        versionName "1.2.1"
+        ndk {
+            //abiFilters 'armeabi-v7a'
         }
+        archivesBaseName = "Zip_Open_File_v${versionName}"
 
-        debug {
-            debuggable true
-            minifyEnabled true
-            shrinkResources true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-
-
-    defaultConfig {
-        vectorDrawables.useSupportLibrary = true
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        debug {
+//            minifyEnabled true
+//            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        buildFeatures {
+            viewBinding true
+        }
     }
 
-
-    buildFeatures {
-        dataBinding = true
-        viewBinding true
+    lintOptions {
+        abortOnError false
     }
+    bundle {
+
+        language {
+            enableSplit = false
+        }
+        density {
+            // This property is set to true by default.
+            enableSplit = true
+        }
+        abi {
+            // This property is set to true by default.
+            enableSplit = true
+        }
+    }
+
+    ndkVersion '21.0.6113669'
 }
+
 dependencies {
 
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'com.github.bumptech.glide:glide:4.9.0'
-    implementation 'com.google.android.material:material:1.7.0'
-
-    implementation 'io.reactivex.rxjava2:rxjava:2.0.1'
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    implementation 'net.lingala.zip4j:zip4j:2.11.5'
-    implementation 'commons-io:commons-io:2.6'
-    implementation 'pub.devrel:easypermissions:3.0.0'
-    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
-    implementation 'com.intuit.sdp:sdp-android:1.0.6'
     implementation 'com.google.android.gms:play-services-ads:21.3.0'
+    //Rate
+    implementation 'com.github.dktlib:smart-app-rate:1.4.1'
+    // Admob
+    implementation 'com.github.dktlib:AdmobUtilsLibrary:7.1.6'
+    // Mediation
+    implementation 'com.google.ads.mediation:pangle:5.0.1.0.0'
+    implementation 'com.google.ads.mediation:adcolony:4.8.0.0'
+    implementation 'com.google.ads.mediation:applovin:11.8.2.0'
+    implementation 'com.google.ads.mediation:facebook:6.13.7.0'
+    implementation 'com.google.ads.mediation:ironsource:7.2.7.0'
+    implementation 'com.google.ads.mediation:vungle:6.12.1.0'
+    // Fb app
+    implementation 'com.facebook.android:facebook-android-sdk:[8,9)'
+
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.0'
+    implementation 'androidx.fragment:fragment-ktx:1.5.0'
+    implementation 'androidx.activity:activity-ktx:1.5.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.0'
+
+    def room_version = "2.4.2"
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:2.4.2"
+
+    implementation 'org.apache.commons:commons-io:1.3.2'
+    implementation("com.tbuonomo:dotsindicator:4.3")
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
+    implementation 'com.jakewharton.rxbinding4:rxbinding:4.0.0'
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+
+    // Firebase
+    implementation platform('com.google.firebase:firebase-bom:30.1.0')
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-config'
+    implementation 'com.google.firebase:firebase-crashlytics'
+
+
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+
+    // Fix Pending intent crash
+    implementation 'androidx.work:work-runtime-ktx:2.7.1'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+    implementation 'com.android.installreferrer:installreferrer:2.2'
+
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'com.blankj:utilcode:1.30.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation project(':libp7zip')
+    implementation "androidx.core:core-ktx:1.7.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation 'com.airbnb.android:lottie:6.0.0'
 }

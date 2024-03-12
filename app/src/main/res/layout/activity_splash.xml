@@ -1,22 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/background_color"
+    android:orientation="vertical">
 
-    <data>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
 
-    </data>
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="@string/app_name"
+        android:textColor="?attr/text_color"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivLogo" />
 
-    <RelativeLayout
-        android:tag="layout/activity_splash_0"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+<!--    <androidx.appcompat.widget.AppCompatImageView-->
+<!--        android:id="@+id/ivLoading"-->
+<!--        android:layout_width="80dp"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/ivLogo"-->
+<!--        app:layout_constraintVertical_bias="0.7"-->
+<!--        android:visibility="visible"/>-->
 
-        <ImageView
-            android:id="@+id/img"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_260sdp"
-            android:layout_marginLeft="@dimen/_40sdp"
-            android:layout_marginRight="@dimen/_40sdp"
-            android:layout_centerInParent="true"
-            android:layout_marginHorizontal="@dimen/_40sdp" />
-    </RelativeLayout>
-</layout>
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animLoading"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        app:lottie_rawRes="@raw/splash_load"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivLogo"
+        app:layout_constraintVertical_bias="0.7"
+        android:scaleX="1.3"
+        android:scaleY="1.3"/>
+
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--        android:id="@+id/tvLoading"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:text="@string/this_action_can_contain_ads"-->
+<!--        android:textColor="?attr/second_text_color"-->
+<!--        android:textSize="14sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/ivLoading"/>-->
+
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="24dp"-->
+<!--        android:background="@drawable/bg_item_language_selected"-->
+<!--        android:text="@string/start"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="14sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/ivLogo"-->
+<!--        app:layout_constraintVertical_bias="0.8"-->
+<!--        android:id="@+id/btnStart"-->
+<!--        android:paddingHorizontal="40dp"-->
+<!--        android:visibility="gone"/>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
