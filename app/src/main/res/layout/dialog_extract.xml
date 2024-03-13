@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="@drawable/corner_16"
+        android:paddingHorizontal="22dp">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:text="@string/extract_file"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/folder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/extract_to"
+            android:textColor="@color/colorAccent"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/corner_8"
+            android:overScrollMode="never"
+            android:paddingEnd="32dp"
+            app:layout_constraintTop_toBottomOf="@id/folder">
+
+            <TextView
+                android:id="@+id/tvFolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:padding="@dimen/edt_padding"
+                android:textColor="@color/text_title"
+                android:textSize="14sp"
+                tools:text="emulated/storage/0/Video/abcxys awet awet aeta tweaw t " />
+        </HorizontalScrollView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivFolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:src="@drawable/ic_select_folder"
+            app:layout_constraintBottom_toBottomOf="@id/horizontal"
+            app:layout_constraintEnd_toEndOf="@id/horizontal"
+            app:layout_constraintTop_toTopOf="@id/horizontal" />
+
+        <TextView
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/password"
+            android:textColor="@color/colorAccent"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontal" />
+
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/corner_8"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/edt_padding"
+            android:paddingTop="@dimen/edt_padding"
+            android:paddingEnd="40dp"
+            android:paddingBottom="@dimen/edt_padding"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/password"
+            tools:text="ghawhwah f awe ag aweg awega geawg awge awgh rh erhrsdtjh rstj wg waegh " />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivShowPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:src="@drawable/ic_show_pass"
+            app:layout_constraintBottom_toBottomOf="@id/edtPassword"
+            app:layout_constraintEnd_toEndOf="@id/edtPassword"
+            app:layout_constraintTop_toTopOf="@id/edtPassword" />
+
+        <Button
+            android:id="@+id/btnExtract"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginVertical="24dp"
+            android:background="@drawable/ripple_corner_12"
+            android:text="@string/extract"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtPassword" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
